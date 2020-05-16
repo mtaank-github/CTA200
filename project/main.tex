@@ -1,0 +1,39 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{mathptmx}
+\usepackage{subcaption}
+\usepackage{natbib}
+\usepackage{graphicx}
+\setlength\parindent{24pt}
+\setlength{\parskip}{0.5em}
+\usepackage{setspace}
+\onehalfspacing
+
+\title{Title}
+\author{Mukesh Taank (mtaank)}
+\date{May 8, 2020}
+
+\begin{document}
+
+\maketitle
+
+\section*{Abstract}
+This report covers the project of analyzing GHIGLS data for the "Spider" region, more specifically, the HI structures located at the disk halo interface that hint at the formation of molecular gas (H$_{2}$). Through working on this project, I have explored extracting  archival HI spectral data stored in data cubes and analyzing said cube. The data is in the form of a $PPV$ cube, so the first axis is the velocity axis and the others are position coordinates. I focused on the region of the cube with coordinates $x = 65$ and $y = 154$. From this, I identified the main features, which included a high peak at about $0$ km/s (low velocity) and a smaller peak at about $-100$ km/s (intermediate velocity) and lots of noise, fluctuating about zero. Once I had the spectrum, I was able to compute the velocity moments (integrals) to obtain some information about the LVC and IVC including the column density (first moment), the centroid velocity (second moment) and the dispersion (third moment). This can help to demonstrate the presence of a molecular cloud. This spectrum can be represented by a Gaussian function, so the next step was to fit a Gaussian function to the data. Since this spectrum has two distinct peaks, it requires more than one Gaussian to fully represent the spectrum, so I followed this multi-Gaussian decomposition of the spectrum. All of this was just for one spectrum. It is important to look at a number of spectra and average them to get a good mean spectrum. I focused on a face of the cube (about 20 x 20 pixels). One key feature compared to the single spectrum is that the noise was essentially negligible with the average spectrum. Another feature was the presence of another peak, at about $-150$ km/s, representing a high velocity region (HVC). I then fitted this average spectrum with the Gaussian model and it was a much better looking fit. The final part of this project was to look at using ROHSA, which is a program that is equipped to complete all of this. The purpose was to understand the processes that ROHSA goes through to generate the data.
+\newpage
+
+\section*{Generating a Spectrum from the Cube}
+fe
+\section*{Computing Velocity Moments}
+\section*{Fitting the Data using a Gaussian Model}
+\section*{Conclusion}
+
+\end{document}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=1.7]{universe}
+\caption{The Universe}
+\label{fig:universe}
+\end{figure}
